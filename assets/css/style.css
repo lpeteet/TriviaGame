@@ -1,0 +1,71 @@
+h1 {
+    color: yellow;
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+body {
+    /* background-size:100%; */
+    background-size: cover;
+    background-image: url("../images/HarryPBG.jpg");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    /* position: relative; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+}
+
+html, body {
+    height:93%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+.table {
+    display:table;
+    text-align:center;
+    width:100%;
+    height:100%;
+    table-layout:fixed;
+}
+.cell {
+    display:table-cell;
+    /* vertical-align:middle; */
+    vertical-align: top;
+
+}
+/* form { */
+#game { 
+    display:inline-block;
+    border:8px solid black;
+    /* width: 450px; */
+    width: 50%;
+    height: 80%;
+    padding:5px;
+    background: blue;
+    color: yellow;
+}
+
+input {
+    margin-bottom:15px;
+}
+
+#images {
+    /* float: left; */
+    position: relative;
+    /* position: absolute; */
+    white-space: nowrap;
+    /* left: 50px; */
+    /* top: 150px; */
+    top: 0px;
+    height: 60px;
+}
