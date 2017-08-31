@@ -16,12 +16,15 @@ $(document).ready(function() {
 
     questionArray.push(new Question("Fastest Animal on Earth?", ["Elephant", "Snail", "Gazelle", "Cheetah"], 4));
     questionArray.push(new Question("Which Dimension is Time?", ["First", "Second", "Third", "Fourth"], 4));
-    questionArray.push(new Question("Where do you find Loopholes?", ["Knitting", "Taxes", "Crochet", "Quantum Physics"], 2));
+    questionArray.push(new Question("Where do you find Loopholes?", ["Knitting", "Taxes", "Astronomy", "Quantum Physics"], 2));
     questionArray.push(new Question("What is the Most Popular Auto Color in America?", ["White", "Black", "Yellow", "Green"], 1));
     questionArray.push(new Question("Which Is The Furthest From Earth?", ["Jupiter", "Uranus", "Pluto", "Titan"], 3));
 
     var currQuestion = 0;
     var currAnswer = 0;
+
+    //******** EVENTS  ********/
+    
     $('.start').on("click", function() {
         //alert("It Works and ID: " + $(this).attr('id'));
         console.log("ReStart Button Clicked!");
@@ -70,7 +73,12 @@ $(document).ready(function() {
     //  The RunTimer function sets an interval
     //  that runs the decrement function once a second.
     function RunTimer() {
+        if (intervalId >= 0) {
+            clearInterval(intervalId);
+            intervalId = 0;
+        }
         intervalId = setInterval(decrement, 1000);
+        number = 30;
     }
 
     function DelayGame() {
@@ -154,6 +162,7 @@ $(document).ready(function() {
         $("#answer2").text(questionArray[currQuestion - 1].answers[1]);
         $("#answer3").text(questionArray[currQuestion - 1].answers[2]);
         $("#answer4").text(questionArray[currQuestion - 1].answers[3]);
+        $("#winloseimg").attr('src', 'https://media.giphy.com/media/88EvfARM1YaCQ/giphy.gif');
     }
 
     function NextQuestion() {
